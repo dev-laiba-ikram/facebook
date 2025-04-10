@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="header-left">
-        <h1>facebook</h1>
+        <img src="./assets/images.png" alt="Facebook Logo" class="logo" />
         <div class="search-box">
-          <input type="text" placeholder="Search" />
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search Facebook" />
         </div>
       </div>
       <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#">Friends</a>
-        <a href="#">Watch</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Groups</a>
+        <a href="#" class="active"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-tv"></i></a>
+        <a href="#"><i class="fas fa-store"></i></a>
+        <a href="#"><i class="fas fa-users"></i></a>
+        <a href="#"><i class="fas fa-gamepad"></i></a>
       </nav>
       <div class="header-right">
-        <a href="#">Profile</a>
+        <a href="#"><i class="fas fa-bell"></i></a>
+        <a href="#"><i class="fas fa-comment-dots"></i></a>
+        <a href="#"
+          ><img src="assets/profile.jpg" alt="Profile" class="profile-pic"
+        /></a>
       </div>
     </header>
 
@@ -33,65 +42,158 @@
           <span>Laiba</span>
         </div>
         <ul>
-          <li>Friends</li>
-          <li>Groups</li>
-          <li>Marketplace</li>
-          <li>Watch</li>
-          <li>Memories</li>
-          <li>Saved</li>
-          <li>Pages</li>
-          <li>Events</li>
+          <li><i class="fas fa-user-friends"></i> Friends</li>
+          <li><i class="fas fa-users"></i> Groups</li>
+          <li><i class="fas fa-store"></i> Marketplace</li>
+          <li><i class="fas fa-tv"></i> Watch</li>
+          <li><i class="fas fa-history"></i> Memories</li>
+          <li><i class="fas fa-bookmark"></i> Saved</li>
+          <li><i class="fas fa-flag"></i> Pages</li>
+          <li><i class="fas fa-calendar-alt"></i> Events</li>
+          <li><i class="fas fa-chevron-down"></i> See More</li>
         </ul>
       </aside>
 
       <main class="feed">
+        <div class="stories">
+          <div class="story add-story">
+            <div class="story-avatar">
+              <img src="assets/profile.jpg" alt="Your Story" />
+              <div class="add-icon">+</div>
+            </div>
+            <span>Create Story</span>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="assets/3.png" alt="Friend 1" />
+            </div>
+            <span>jonus dev</span>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="assets/4.png" alt="Friend 2" />
+            </div>
+            <span>James </span>
+          </div>
+          <div class="story">
+            <div class="story-avatar">
+              <img src="assets/5.png" alt="Friend 3" />
+            </div>
+            <span>jenny</span>
+          </div>
+        </div>
+
         <div class="create-post">
           <div class="post-input">
-            <img src="./assets/profile.jpg" alt="Profile" />
+            <img src="./assets/2.png" alt="Profile" />
             <input type="text" placeholder="What's on your mind?" />
           </div>
           <div class="post-options">
-            <button>Live Video</button>
-            <button>Photo/Video</button>
-            <button>Feeling/Activity</button>
+            <button><i class="fas fa-video"></i> Live Video</button>
+            <button><i class="fas fa-images"></i> Photo/Video</button>
+            <button><i class="fas fa-smile"></i> Feeling/Activity</button>
           </div>
         </div>
 
         <div class="post">
           <div class="post-header">
-            <img src="assets/images.jpg" alt="Friend" />
-            <div class="post-info">
-              <span>Friend Name</span>
+            <img src="assets/3.png" alt="Friend 1" />
+            <div class="post-user-info">
+              <h4>Jonus dev</h4>
               <span>2 hrs ago</span>
             </div>
           </div>
-          <div class="post-content">
-            <p>This is a sample post content. Hello everyone!</p>
-            <img src="assets/images (2).jpg" alt="Post" />
-          </div>
+          <p>Just had an amazing skydiving!</p>
+          <img src="assets/4.png" alt="Post Image" class="post-img" />
+
           <div class="post-actions">
-            <button>Like</button>
-            <button>Comment</button>
-            <button>Share</button>
+            <button class="like-btn">
+              <i class="fas fa-thumbs-up"></i> Like (<span class="like-count"
+                >0</span
+              >)
+            </button>
+            <button class="comment-toggle">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+            <button><i class="fas fa-share"></i> Share</button>
+          </div>
+          <div class="comment-section" style="display: none">
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="Write a comment..."
+            />
+            <div class="comments"></div>
           </div>
         </div>
 
         <div class="post">
           <div class="post-header">
-            <img src="assets/images.jpg" alt="Friend" />
-            <div class="post-info">
-              <span>Another Friend</span>
+            <img src="assets/6.png" alt="Friend 1" />
+            <div class="post-user-info">
+              <h4>Jonus dev</h4>
+              <span>2 hrs ago</span>
+            </div>
+          </div>
+          <p>Good Morning!</p>
+          <img src="assets/profile.jpg" alt="Post Image" class="post-img" />
+
+          <div class="post-actions">
+            <button class="like-btn">
+              <i class="fas fa-thumbs-up"></i> Like (<span class="like-count"
+                >0</span
+              >)
+            </button>
+            <button class="comment-toggle">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+            <button><i class="fas fa-share"></i> Share</button>
+          </div>
+          <div class="comment-section" style="display: none">
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="Write a comment..."
+            />
+            <div class="comments"></div>
+          </div>
+        </div>
+
+        <div class="post">
+          <div class="post-header">
+            <img src="assets/5.png" alt="Friend 2" />
+            <div class="post-user-info">
+              <h4>James deo</h4>
               <span>5 hrs ago</span>
             </div>
           </div>
-          <div class="post-content">
-            <p>Check out this amazing view from my vacation!</p>
-            <img src="assets/images (3).jpg" alt="Post" />
-          </div>
+          <p>Loved the movie last night 🎬 Who else has seen it?</p>
+          <img src="assets/3.png" alt="Post Image" class="post-img" />
+          <!-- <div class="post-actions">
+            <button><i class="fas fa-thumbs-up"></i> Like</button>
+            <button><i class="fas fa-comment"></i> Comment</button>
+            <button><i class="fas fa-share"></i> Share</button>
+          </div> -->
           <div class="post-actions">
-            <button>Like</button>
-            <button>Comment</button>
-            <button>Share</button>
+            <button class="like-btn">
+              <i class="fas fa-thumbs-up"></i> Like (<span class="like-count"
+                >0</span
+              >)
+            </button>
+            <button class="comment-toggle">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+            <button><i class="fas fa-share"></i> Share</button>
+          </div>
+
+          <!-- Add this under post-actions in each .post -->
+          <div class="comment-section" style="display: none">
+            <input
+              type="text"
+              class="comment-input"
+              placeholder="Write a comment..."
+            />
+            <div class="comments"></div>
           </div>
         </div>
       </main>
@@ -100,26 +202,54 @@
         <div class="sponsored">
           <h3>Sponsored</h3>
           <div class="sponsored-item">
-            <img src="assets/ad1.jpg" alt="Ad" />
+            <img src="assets/images (4).jpg" alt="Ad" />
             <div>
               <span>Advertisement</span>
               <span>example.com</span>
             </div>
           </div>
         </div>
+        <div class="birthdays">
+          <h3>Birthdays</h3>
+          <p>
+            <i class="fas fa-birthday-cake"></i> <strong>Friend 4</strong> and
+            <strong>2 others</strong> have birthdays today.
+          </p>
+        </div>
         <div class="contacts">
-          <h3>Contacts</h3>
+          <div class="contacts-header">
+            <h3>Contacts</h3>
+            <div class="contact-icons">
+              <i class="fas fa-video"></i>
+              <i class="fas fa-search"></i>
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
           <ul>
-            <li>Friend 1</li>
-            <li>Friend 2</li>
-            <li>Friend 3</li>
-            <li>Friend 4</li>
-            <li>Friend 5</li>
+            <li>
+              <img src="assets/3.png" alt="Friend 1" />
+              <span>James dev</span>
+              <div class="online-indicator"></div>
+            </li>
+            <li>
+              <img src="assets/4.png" alt="Friend 2" />
+              <span>Jonus </span>
+              <div class="online-indicator"></div>
+            </li>
+            <li>
+              <img src="assets/5.png" alt="Friend 3" />
+              <span>jenny</span>
+            </li>
           </ul>
         </div>
       </aside>
     </div>
 
-    <script src="./script.js"></script>
+    <div id="story-modal" class="story-modal">
+      <span class="close-btn">&times;</span>
+      <img class="modal-content" id="story-view-img" alt="Story View" />
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
